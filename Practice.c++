@@ -149,4 +149,4 @@ bool CheckTie(char *spaces)
     return true;
 }
 
-/*This is the based project*/
+/*This is the based project in the working directory*/
