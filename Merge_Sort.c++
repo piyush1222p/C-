@@ -1,45 +1,63 @@
 #include <iostream>
+#include <vector>
 using namespace std;
-void merge(int arr1[],int size1,int arr2[],int size2,int merged[]);
+
+void merge(vector<int> &arr1, vector<int> &arr2, vector<int> &merged);
+
 int main()
 {
-    int arr1[4] = {1,2,3,4};
-    int arr2[4] = {5,6,7,8};
-    int merged[8];
+    int size1, size2;
+    cout << "Enter the size of the first array: \n";
+    cin >> size1;
+    vector<int> arr1(size1);
+    cout << "Enter elements of the first array (sorted): ";
+    for (int i = 0; i < size1; i++) {
+        cout<<"Enter the element "<<i+1<<": ";
+        cin >> arr1[i];
+    }
 
-    merge(arr1,4,arr2,4,merged);
+    cout << "Enter the size of the second array: \n";
+    cin >> size2;
+    vector<int> arr2(size2);
+    cout << "Enter elements of the second array: \n";
+    for (int i = 0; i < size2; i++) {
+        cout<<"Enter the element "<<i+1<<": ";
+        cin >> arr2[i];
+    }
 
-    std::cout<<"Merged Array: ";
+    vector<int> merged(size1 + size2);
+    merge(arr1, arr2, merged);
 
-    for (int element: merged)
-    {
-        std::cout<<element<<" ";
+    cout << "Merged Array: ";
+    for (int element : merged) {
+        cout << element << " ";
     }
     return 0;
 }
-void merge(int arr1[],int size1,int arr2[],int size2,int merged[])
-{
-    int i=0,j=0,k=0;
 
-    while (i<size1 && j<size2)
+void merge(vector<int> &arr1, vector<int> &arr2, vector<int> &merged)
+{
+    int i = 0, j = 0, k = 0;
+
+    while (i < arr1.size() && j < arr2.size())
     {
-        if (arr1[i]<arr2[j])
+        if (arr1[i] < arr2[j])
         {
-            merged[k++]=arr1[i++];
+            merged[k++] = arr1[i++];
         }
         else
         {
-            merged[k++]=arr2[j++];
+            merged[k++] = arr2[j++];
         }
     }
-    
-    while (i<size1)
+
+    while (i < arr1.size())
     {
-        merged[k++]=arr1[i++];
+        merged[k++] = arr1[i++];
     }
-    
-    while (j<size2)
+
+    while (j < arr2.size())
     {
-        merged[k++]=arr2[j++];
+        merged[k++] = arr2[j++];
     }
 }
