@@ -5,7 +5,6 @@ class Student{
         int age;
         double gpa;
     
-    //To create the constructor
     /*To create the constructor add the class name as the function called and fill with the same attributes as the public class is having*/
     Student(std::string name,int age,double gpa){
         this ->name=name;
