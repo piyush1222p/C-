@@ -8,7 +8,7 @@ Useful when we don't know how much memory we will need. Makes our programs more 
 
 int main()
 {
-    char *Pgrade = NULL;  // Declare a pointer to char and initialize it to NULL
+    char *Pgrade = nullptr;  // Declare a pointer to char and initialize it to NULL
     int size;  // Declare an integer variable to store the size of the array
 
     std::cout << "How many grades to enter in? ";
@@ -30,6 +30,7 @@ int main()
     std::cout << std::endl;
 
     delete[] Pgrade;  // Deallocate the memory allocated for the array
+    Pgrade = nullptr;  // Set the pointer to NULL to avoid dangling pointer issues
 
     return 0;
 }
