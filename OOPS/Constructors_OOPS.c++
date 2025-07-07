@@ -7,12 +7,14 @@ class Student{
         double gpa;
         string college;
     
-    /*To create the constructor add the class name as the function called and fill with the same attributes as the public class is having*/
-    Student(std::string name,int age,double gpa){
+    /*To create the constructor add the class name as the function called and fill with the same attributes as the public class is having{Parameterized Constructor}*/
+    Student(){
+        college = "NIET"; //Assigning a default value to the college attribute for default Constructor
+    }
+    Student(std::string name,int age,double gpa){//Parameterized constructor
         this ->name=name;
         this ->age=age;
         this ->gpa=gpa;
-        college = "NIET";//Assigning a default value to the college attribute
         /*this ->name=name; is used to differentiate between the class attribute and the parameter passed to the constructor*/
         
         /*Constructor: Special method that is automatically called wehen an object is instantiated useful for assigning values to attributes as arguments*/
