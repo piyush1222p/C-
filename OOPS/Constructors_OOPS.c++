@@ -32,7 +32,7 @@ int main(){
     cout<<S1.college<<endl;
 
     cout<<"\n";
-    
+
     cout<<S3.name;
     cout<<S3.age<<endl;
     cout<<S3.gpa<<endl;
@@ -43,7 +43,7 @@ int main(){
     cout<<S2.name<<endl;
     cout<<S2.age<<endl;
     cout<<S2.gpa<<endl;
-    cout<<"College: "<<S2.college<<endl;
+    cout<<S2.college<<endl;
 
     return 0;
 }
