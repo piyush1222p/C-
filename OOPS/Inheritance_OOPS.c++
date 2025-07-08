@@ -79,9 +79,12 @@ int main() {
     // 1. Person parameterized constructor
     // 2. Student constructor
     Student s1("John",23,"Mathematics",101);
+    Teacher T1("Alice",30,"Physics");
 
     // Display student info
     s1.display();
+    cout << "\n";
+    T1.display();
 
     // At end of scope, destructors are called in reverse:
     // 1. Student destructor
