@@ -64,5 +64,6 @@ int main() {
     // 1. Student destructor
     // 2. Person destructor
 
+    cout<<s1.name<<endl;
     return 0;
 }
